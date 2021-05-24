@@ -1,0 +1,140 @@
+@import 'src/app/app.component.scss';
+
+section{
+  @media screen and (max-width: 1020px) {
+    padding: 0;
+  }
+}
+header{
+  .title{
+    padding: 0 5rem;
+    @media screen and (max-width: 392px) {
+      margin: 0;
+      padding: 1em;
+      position: absolute;
+      z-index: 2;
+      i{
+        color:$whiteFont;
+      }
+    }
+  }
+  @media screen and (max-width: 392px) {
+    position: absolute;
+    z-index: 2;
+  }
+  h4{
+    @media screen and (max-width: 392px) {
+    color:$whiteFont;
+    }
+  }
+}
+    .carousel {
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      gap: 1rem;
+      width: 74vw;
+      &::-webkit-scrollbar {
+        height: 0;
+      }
+      @media screen and (max-width: 1020px) {
+       width: 66vw;
+      }
+      @media screen and (max-width: 769px) {
+        width: 100%;
+
+      }
+
+      .carouselImg {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        img {
+          @include size(40vw, 74vw);
+          @media screen and (max-width: 769px) {
+            @include size(80vw,98vw);
+          }
+          @media screen and (max-width: 425px) {
+            @include size(160vw,200vw);
+          }
+        }
+        .carousel-text {
+          transform: translate(-4rem, -10rem);
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-start;
+          flex-flow: column;
+          padding: 2rem 4rem;
+          width: 33vw;
+          @media screen and (min-width: 2800px) {
+            width: 50vw;
+          }
+          @media screen and (max-width: 1220px) {
+            transform: translate(0, -10rem);
+            width: 100%;
+          }
+            p{
+              @media screen and (max-width: 1220px) {
+                width: 90%;
+              }
+              @media screen and (max-width: 425px) {
+
+                  width: 45%;
+            }
+          }
+          @media screen and (max-width: 1020px) {
+            padding: 1em;
+          }
+          .text {
+            padding: 4em;
+            flex-flow: column;
+            margin: 0;
+            align-items: flex-end;
+          }
+        }
+      }
+    }
+
+    .scrollBtn {
+      cursor: pointer;
+      margin-top:-12rem;
+      transform: translate(-100%, 0);
+      @media screen and (min-width: 2800px) {
+        width: 50vw;
+        margin-top: -28rem;
+        transform: translate(-15%, 0);
+      }
+      @media screen and (max-width: 1220px) {
+        margin-top:-8rem;
+        transform: translate(0, 0);
+        @include d-center;
+      }
+
+      img {
+        margin: 0 3rem;
+        &:nth-child(2) {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .scrollPoints {
+      width: 100%;
+      @include d-center;
+      gap: 1rem;
+      cursor:pointer;
+      .brownBg{
+        background-color:$mainBgColor;
+        transition: background-color .3s ease-in-out;
+      }
+      span {
+        cursor:pointer;
+        @include size(1rem, 1rem);
+        border-radius: 50%;
+        border: 1px solid $mainBgColor;
+        transition: background-color .3s ease-in-out;
+      }
+    }
+
+

@@ -1,0 +1,51 @@
+@import 'src/app/app.component.scss';
+
+header{
+  @include d-right;
+  @media screen and (max-width: 381px) {
+   @include d-center;
+  }
+  .title{
+    h4{
+      @media screen and (max-width: 381px) {
+        display: none;
+      }
+    }
+  i{
+    @media screen and (max-width: 381px) {
+     display: block;
+    }
+  }
+  }
+}
+.textContant{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color:$mainFontColor;
+  @media screen and (max-width: 1727px) {
+   gap: 1em;
+  }
+  @media screen and (max-width: 1154px) {
+    flex-flow: column;
+  }
+  @media screen and (max-width: 768px) {
+    gap: 3em;
+  }
+  h3{
+    width: 12em;
+    @media screen and (max-width: 1727px) {
+      width: 100%;
+    }
+  }
+ p{
+   font-size: 22px;
+   width: 37em;
+   @media screen and (max-width: 1154px) {
+     width: 100%;
+   }
+   @media screen and (max-width: 768px) {
+     font-size: 16px;
+   }
+ }
+}

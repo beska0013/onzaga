@@ -1,0 +1,72 @@
+<ng-template #mobile>
+  <div class="menuBtn" (click)="mobMenuOpen()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="mobileMenu" id="mobMenu" [ngStyle]="{backgroundImage:'url(./assets/img/IMG.png)'}" >
+    <div class="close" (click)="mobMenuClose()">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="menu">
+    <ul>
+      <li>
+        <a href="#inicio" (click)="mobMenuClose()" >Inicio</a>
+      </li>
+      <li>
+        <a href="#servicios" (click)="mobMenuClose()" >Conócenos</a>
+      </li>
+      <li>
+        <a href="#certificaciones" (click)="mobMenuClose()" >Servicios</a>
+      </li>
+      <li>
+        <a href="#empresas" (click)="mobMenuClose()" >Certificaciones</a>
+      </li>
+      <li>
+        <a href="#proyectos" (click)="mobMenuClose()" >Empresas</a>
+      </li>
+      <li>
+        <a href="#contacto" (click)="mobMenuClose()" >Proyectos</a>
+      </li>
+      <li>
+        <a routerLink="contacts" (click)="mobMenuClose()" >Contacto</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</ng-template>
+
+<header id="header"  (scroll)="onScroll($event)">
+
+  <h2>
+    <a routerLink="">
+    <strong id="strong" class="white">CANTERAS</strong> ALMARGEN
+    </a>
+  </h2>
+
+  <nav *ngIf="on; else mobile">
+    <ul>
+      <li><a href="#inicio">
+       INICIO
+      </a></li>
+      <li><a href="#servicios">
+        CONÓCENOS
+      </a></li>
+      <li><a href="#certificaciones">
+        SERVICIOS
+      </a></li>
+      <li><a href="#empresas">
+        CERTIFICACIONES
+      </a></li>
+      <li><a href="#proyectos">
+        EMPRESAS
+      </a></li>
+      <li><a href="#contacto">
+        PROYECTOS
+      </a></li>
+      <li><a routerLink="contacts">
+        CONTACTO
+      </a></li>
+    </ul>
+  </nav>
+
+</header>

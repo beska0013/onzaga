@@ -1,0 +1,27 @@
+<section id="certificaciones">
+  <header>
+    <div class="title">
+      <h4>CERTIFICACIONES</h4>
+      <i class="fas fa-arrow-down"></i>
+    </div>
+  </header>
+    <div class="content">
+      <h3>
+        Toda nuestra actividad cumple estrictamente con los sistemas de calidad,
+        medio ambiente, salud y trabajo.
+      </h3>
+
+    <div class="cards">
+      <div class="card"  *ngFor="let card of cards">
+        <div class="card-content">
+      <img src="{{card.logo}}" alt="img">
+      <h5>{{card.header}}</h5>
+      <p>{{card.main}}</p>
+      <h5>{{card.footer}}</h5>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+</section>

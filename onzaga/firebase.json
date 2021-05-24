@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "app-onzaga",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

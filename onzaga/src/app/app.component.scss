@@ -1,0 +1,155 @@
+//--mixins--//
+@mixin d-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin d-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin d-right{
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+}
+@mixin d-left{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+@mixin size($height,$width) {
+  height: $height;
+  width: $width;
+  font-family: 'Saira', sans-serif;
+
+}
+
+
+
+//--variables--//
+$mainBgColor:#9B8068;
+$secondaryBgColor:#F5F2EF;
+$whiteFont:#FFFFFF;
+$mainFontColor:rgb(155 128 104);
+$mainFontColorLight:rgb(155 128 104 /.1);
+$mainFont:'Saira', sans-serif;
+$secondaryFont:'Saira Thin',sans-serif;
+
+
+main {
+  @include d-center;
+}
+
+h4 {
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  color: $mainFontColor;
+  font-size:24px;
+  @media screen and (min-width:2800px) {
+    font-size: 46px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 492px) {
+    padding: 0 1em 0 0;
+  }
+}
+h3{
+  font-size: 46px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $mainFontColor;
+  @media screen and (min-width:2800px) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: 1154px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 492px) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: 392px) {
+    font-size: 22px;
+  }
+}
+.text {
+  padding: 5em 10em;
+  color:$whiteFont;
+  width: 42vw;
+  background-color: $mainBgColor;
+  gap: 1em;
+  @include d-center;
+  @media screen and (max-width: 1024px) {
+    padding: 2em 1em;
+    width: 50vw;
+  }
+  @media screen and (max-width: 568px) {
+    width: 80vw;
+  }
+
+  h2 {
+    font-size: calc(2vw - 1rem);
+    color: $whiteFont;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.2em;
+    @media screen and (max-width: 1024px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 425px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 390px) {
+      font-size: 16px;
+    }
+  }
+}
+p{
+  font-size:calc(2.5vw - 1.9rem);
+  @media screen and (max-width: 1868px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+}
+
+  .title{
+    cursor: default;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin: 5rem 0;
+    i{
+      font-size: 20px;
+      color:$mainFontColor;
+      transition: transform .2s ease-in-out;
+      @media screen and (min-width:2800px) {
+        font-size: 32px;
+      }
+
+      @media screen and (max-width: 381px) {
+        display: none;
+      }
+    }
+    &:hover i{
+      transform: translate(0,1rem);
+      transition: transform .3s ease-in-out;
+    }
+
+    }
+.content {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+

@@ -1,0 +1,113 @@
+@import 'src/app/app.component.scss';
+
+footer{
+  background-color:$mainBgColor;
+  padding: 3rem 5rem 10rem 5rem;
+  @media screen and (max-width: 1292px){
+    padding: 5rem 3rem 10rem 3rem;
+  }
+  @media screen and (max-width: 392px){
+    padding: 5rem 0 10rem 1em;
+  }
+
+  @include d-center;
+ .footer-content{
+   display: flex;
+   justify-content: space-between;
+    width: 90%;
+    @media screen and (max-width: 992px){
+      width: 100%;
+    }
+    @media screen and (max-width: 778px){
+      flex-flow: column;
+      gap: 2rem;
+    }
+    .fourth-section{
+      margin-top: 60px;
+      @media screen and (max-width: 778px){
+       font-size:2rem;
+        margin:0;
+      }
+      li{
+        @media screen and (max-width: 778px) {
+          font-size: 2rem;
+        }
+      }
+    }
+    .first-section {
+      img{
+        height: 20px;
+        margin: 9px 0 56px 0;
+        @media screen and (max-width: 992px){
+          height: 16px;
+          margin: 9px 0 46px 0;
+        }
+        @media screen and (max-width: 778px){
+          height: 20px;
+        }
+        @media screen and (max-width: 372px){
+          height: 16px;
+        }
+
+      }
+      li{
+        display: flex;
+        align-items: center;
+        i{
+          font-size: 26px;
+          margin: 0 8px 0 0;
+          @media screen and (max-width: 992px){
+            font-size: 22px;
+          }
+          @media screen and (max-width: 778px){
+            font-size: 26px;
+          }
+          @media screen and (max-width: 372px){
+            font-size: 20px;
+          }
+        }
+        p{
+          font-size: 1.25rem;
+          @media screen and (max-width: 992px){
+            font-size: 1rem;
+          }
+          @media screen and (max-width: 778px){
+            font-size:2rem;
+          }
+          @media screen and (max-width: 392px){
+            font-size: 1rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    ul{
+      color:$whiteFont;
+        i{
+          margin: 10px 15px 0 0;
+          font-size: 20px;
+        }
+      h5{
+        font-size: 14px;
+        color:$whiteFont;
+        margin: 5px 0 10px;
+        @media screen and (max-width: 778px){
+          font-size:2rem;
+        }
+      }
+      li{
+        font-size: 0.875rem;
+        @media screen and (max-width: 992px){
+          font-size: 0.75rem;
+        }
+        @media screen and (max-width: 778px){
+          font-size: 0.875rem;
+        }
+        @media screen and (max-width: 372px){
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+}

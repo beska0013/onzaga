@@ -1,0 +1,51 @@
+@import 'src/app/app.component.scss';
+
+
+
+   h3{
+     width: 68%;
+     margin-bottom:3rem ;
+     @media screen and (max-width: 1727px) {
+       width: 100%;
+     }
+   }
+
+
+  .cards {
+    @include d-center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    .card {
+      background-color:$secondaryBgColor;
+      @include d-center;
+      @include size(28rem, 18rem);
+      text-align: center;
+      color: $mainFontColor;
+      @media screen and (max-width: 281px) {
+        width: 100%;
+      }
+      .card-content {
+        @include d-between;
+        height: 80%;
+        flex-flow: column;
+        padding: 1em 0;
+        img{
+          @include size(10rem,10rem);
+        }
+        h5 {
+          font-size: 22px;
+          font-family: $secondaryFont;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          width: 100%;
+          padding: 0 1em;
+        }
+        p {
+          @media screen and (max-width: 2810px) {
+            font-size: 16px;
+          }
+
+        }
+      }
+    }
+  }

@@ -1,0 +1,43 @@
+@import 'src/app/app.component.scss';
+
+
+
+
+
+.cookies{
+  position: fixed;
+  bottom: 0;
+  padding: 1rem 0;
+  background-color: #FFFFFF;
+  color:$mainFontColor;
+  @include d-center;
+  .cookies-content{
+   @include d-between;
+    width: 80%;
+    p{
+     width: 70%;
+      font-size: 14px;
+      a{
+        border-bottom: 1px solid $mainFontColor;
+        cursor:pointer;
+      }
+    }
+    button{
+      width: 20%;
+      background-color:$mainFontColor;
+      border: 1px solid $mainFontColor;
+      font-size: 18px;
+      text-transform: uppercase;
+      padding: 1em;
+      color:$whiteFont;
+      font-family:$mainFont;
+      cursor:pointer;
+      transition: background-color .3s ease-in-out,color .3s ease-in-out;
+      &:active{
+        background-color:#FFFFFF;
+        color:$mainFontColor;
+        transition: background-color .3s ease-in-out,color .3s ease-in-out;
+      }
+    }
+  }
+}

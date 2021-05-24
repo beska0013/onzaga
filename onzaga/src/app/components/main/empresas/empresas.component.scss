@@ -1,0 +1,189 @@
+@import 'src/app/app.component.scss';
+
+
+section{
+  padding: 0;
+}
+.wrapper {
+  @include d-between;
+  height: 42vw;
+  flex-flow: column;
+  @media screen and (max-width: 1024px) {
+    height: 60vw;
+  }
+  @media screen and (max-width: 768px) {
+    height: 100vw;
+  }
+
+  header {
+  padding: 0 10em;
+    @media screen and (min-width:2800px) {
+      padding: 0 20em;
+    }
+    @media screen and (min-width:2800px) {
+      padding: 0 20em;
+    }
+    @media screen and (max-width: 1800px) {
+      padding: 0 5em;
+    }
+    @media screen and (max-width: 792px) {
+      padding: 0 1em;
+    }
+    .title{
+      margin: 1rem 0;
+      h4,i{
+        color:$whiteFont;
+      }
+    }
+
+  }
+}
+.empresas-blog{
+  @include d-center;
+  margin-top:-15rem;
+  p{
+    width:24vw;
+    @media screen and (max-width: 1420px) {
+      width:37vw;
+    }
+    @media screen and (max-width: 1020px) {
+      width:100%;
+    }
+  }
+  ul {
+    width: 70%;
+  }
+  @media screen and (max-width: 1020px) {
+    margin: 0;
+  }
+}
+.text{
+  align-items: flex-start;
+  background-color:$mainBgColor;
+  width: 50%;
+  padding: 5em 1em;
+  margin: 0;
+
+  @media screen and (max-width: 1468px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 1020px) {
+    padding: 3em 2em;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    flex-flow: column;
+  }
+
+  h2{
+    font-size: calc(2vw - 1rem);
+    width: 8.5em;
+    @media screen and (max-width: 1468px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 392px) {
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+
+}
+.empresas-img-text {
+  flex-flow: column;
+  width: 90%;
+  color: $whiteFont;
+  transform:translate(0,-10rem);
+  @media screen and (max-width: 1020px) {
+    width: 100%;
+    padding: 1em;
+    transform:translate(0,0);
+    margin-top: -.5em ;
+  }
+  span{
+    content:'';
+    width: 100%;
+    height: 1px;
+    background-color:$whiteFont;
+  }
+  p{
+    padding: 3em  0;
+    width:23vw;
+    @media screen and (max-width: 1720px) {
+      width: 100%;
+    }
+  }
+
+  h2 {
+     width: 100%;
+  }
+
+
+  .empresas-footer {
+    width: 100%;
+    @include d-between;
+    margin-top: 1em;
+    h6 {
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    i {
+      font-size: 20px;
+      transform: translate(-2rem, 0);
+      transition: transform .3s ease-in-out;
+    }
+    &:hover i {
+      transform: translate(0, 0);
+      transition: transform .3s ease-in-out;
+    }
+  }
+}
+.empresas-text{
+  text-align: center;
+  color:$mainFontColor;
+  width: 100%;
+  margin: 5rem 0;
+  @include d-center;
+  @media screen and (max-width: 768px) {
+    text-align: start;
+  }
+  p{
+    font-size: 26px;
+    width: 44%;
+    @media screen and (min-width:2800px) {
+      font-size: 46px;
+    }
+    @media screen and (max-width: 1020px) {
+      width: 90%;
+    }
+  }
+}
+.empresas-img-contant {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  padding: 0 4em;
+  @media screen and (max-width: 1020px) {
+   flex-flow: column;
+    gap: 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0 ;
+  }
+
+  .empresas-img {
+    width: 40%;
+    @media screen and (max-width: 1468px) {
+    width: 100%;
+    }
+    img {
+      width: 100%;
+      @media screen and (max-width: 1024px) {
+        height: 75vw;
+      }
+
+    }
+  }
+}
