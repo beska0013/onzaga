@@ -1,5 +1,7 @@
 <section id="empresas" >
-<div class="wrapper"  [ngStyle]="{background: 'url(./assets/img/Onzaga_previos_dosier--42.scaled.png) no-repeat 50% 50%',backgroundSize:'cover' }">
+<div class="wrapper"  [ngStyle]=
+  "bgBig && {backgroundImage: 'url(./assets/img/Onzaga_previos_dosier--42.png)' } ||
+   bgSmall && {backgroundImage: 'url(./assets/img/IMG.png)'}">
   <header>
     <div class="title">
     <h4>EMPRESAS</h4>
@@ -8,7 +10,7 @@
   </header>
 </div>
   <div class="empresas-blog">
-  <div class="text">
+  <div class=" empresas-blog-text text">
     <h2>
       CANTERAS ALMARGEN
     </h2>
@@ -28,7 +30,11 @@
   </div>
   <div class="empresas-img-contant">
     <div class="empresas-img">
-      <img src="./assets/img/Onzaga_previos_dosier-1-8.png" alt="">
+      <picture>
+        <source media="(max-width: 426px)" srcset='./assets/img/Onzaga_previos_dosier-1-8@2x.png'>
+        <img src="./assets/img/Onzaga_previos_dosier-1-8.png" alt="">
+      </picture>
+<!--      <img src="./assets/img/Onzaga_previos_dosier-1-8.png" alt="">-->
       <div class="text empresas-img-text"  style="background-color: #3B5971">
         <h2>AGLOMERADOS SUR</h2>
         <p>Empresa fabricante de mezclas bituminosas de alta calidad garantizada,
@@ -44,7 +50,11 @@
     </div>
 
     <div class="empresas-img">
-      <img  src="./assets/img/Onzaga_previos_dosier-1-14.png" alt="">
+      <picture>
+        <source media="(max-width: 426px)" srcset='./assets/img/Onzaga_previos_dosier-1-14@2x.png'>
+        <img src="./assets/img/Onzaga_previos_dosier-1-14.png" alt="">
+      </picture>
+<!--      <img  src="./assets/img/Onzaga_previos_dosier-1-14.png" alt="">-->
       <div class="text empresas-img-text"  style="background-color: #53575A">
         <h2>HORMIGONES FORZA</h2>
         <p>Empresa fabricante de mezclas bituminosas de alta calidad garantizada,

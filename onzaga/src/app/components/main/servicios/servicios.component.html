@@ -15,7 +15,10 @@
     <div class="content">
   <div class="carousel" id="carouselWindow">
     <div class="carouselImg" id="carouelCard" *ngFor=" let img of servisioImg">
-      <img  src='{{img.img}}' alt="img1">
+      <picture>
+        <source media="(max-width: 426px)" srcset=' {{img.smallImg}}'>
+        <img src="{{img.img}}" alt="">
+      </picture>
       <div class="carousel-text text" id="carouselText">
         <h2>{{img.title}}</h2>
         <p>{{img.text}}</p>
@@ -23,8 +26,8 @@
     </div>
   </div>
       <div class="scrollBtn" *ngIf="pointsView();else  scrollPoints">
-        <img src="./assets/img/arrow-long.png" id="previous" (click)="scrollNext()" alt="right-arrow">
-        <img src="./assets/img/arrow-long.png" id="next" (click)="scrollReset()" alt="left-arrow">
+        <img src="./assets/img/arrow-long.png" id="previous" (click)="scrollPrevious()" alt="left-arrow">
+        <img src="./assets/img/arrow-long.png" id="next" (click)="scrollNext()" alt="right-arrow">
       </div>
       <ng-template #scrollPoints>
         <div class="scrollPoints">

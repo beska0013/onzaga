@@ -1,10 +1,15 @@
 @import 'src/app/app.component.scss';
 
 
-
+section{
+  margin-top: 10rem;
+  @media screen and (max-width: 15680px) {
+    margin-top: 0;
+  }
+}
    h3{
      width: 68%;
-     margin-bottom:3rem ;
+     margin-bottom: 5rem ;
      @media screen and (max-width: 1727px) {
        width: 100%;
      }
@@ -15,6 +20,9 @@
     @include d-center;
     flex-wrap: wrap;
     gap: 2rem;
+    @media screen and (min-width: 1950px) {
+      flex-wrap: nowrap;
+    }
     .card {
       background-color:$secondaryBgColor;
       @include d-center;

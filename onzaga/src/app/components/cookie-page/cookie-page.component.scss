@@ -5,9 +5,12 @@
 
 
 .contactoText{
-  padding: 0 10%;
+  padding: 0 10em;
   width: 88%;
   margin: 120px 0;
+  @media screen and (min-width: 1950px) {
+    padding: 0 20em;
+  }
   @media screen and (max-width: 1268px){
     padding: 0 7%;
   }

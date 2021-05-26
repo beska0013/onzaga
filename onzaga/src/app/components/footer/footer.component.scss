@@ -8,6 +8,7 @@ footer{
   }
   @media screen and (max-width: 392px){
     padding: 5rem 0 10rem 1em;
+    margin-top: 3rem;
   }
 
   @include d-center;
@@ -30,7 +31,7 @@ footer{
       }
       li{
         @media screen and (max-width: 778px) {
-          font-size: 2rem;
+          font-size: 14px;
         }
       }
     }
@@ -69,7 +70,7 @@ footer{
         p{
           font-size: 1.25rem;
           @media screen and (max-width: 992px){
-            font-size: 1rem;
+            font-size: 18px;
           }
           @media screen and (max-width: 778px){
             font-size:2rem;
@@ -90,9 +91,11 @@ footer{
       h5{
         font-size: 14px;
         color:$whiteFont;
+        font-family:$secondaryFont;
+        letter-spacing: 1px;
         margin: 5px 0 10px;
-        @media screen and (max-width: 778px){
-          font-size:2rem;
+        @media screen and (max-width: 768px){
+          font-size: 14px;
         }
       }
       li{
@@ -103,8 +106,8 @@ footer{
         @media screen and (max-width: 778px){
           font-size: 0.875rem;
         }
-        @media screen and (max-width: 372px){
-          font-size: 0.75rem;
+        @media screen and (max-width: 392px){
+          font-size: 14px;
         }
       }
     }

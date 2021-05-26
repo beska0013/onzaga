@@ -1,33 +1,41 @@
 @import 'src/app/app.component.scss';
 
-section {
-  height: 42vw;
+
+.inicio {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
   flex-flow: column-reverse;
   padding: 0;
   @media screen and (max-width: 1024px) {
-    height: 60vw;
+    height: 80vh;
   }
-  @media screen and (max-width: 768px) {
-    height: 100vw;
+  @media screen and (max-width: 426px) {
+    background-position-x: 55%;
   }
-
-
-
 }
+
 .text{
   margin:-6em 0;
-  @media screen and (max-width: 768px) {
-  padding: 1em;
+  @media screen and (max-width: 320px) {
+    padding: 3em 0;
+    margin: -3em 0;
   }
-  h2{
-    font-size:calc(40px + 1vw);
-    width: 8.5em;
-
-    @media screen and (max-width: 768px) {
-      font-size: 36px;
+  h1{
+    font-family:$secondaryFont;
+    font-size:max(2.5vw);
+    width: 7.3em;
+    margin: 0;
+    @media screen and (max-width: 1441px) {
+      font-size: min(40px);
     }
     @media screen and (max-width: 468px) {
-      font-size: 24px;
+      width: 18.8rem;
+    }
+    @media screen and (max-width: 320px) {
+      font-size:24px;
+      width: 12.8rem;
     }
   }
 

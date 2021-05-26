@@ -8,31 +8,36 @@ import {ChangeDetectionStrategy, Component, HostListener, OnInit} from '@angular
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
+  constructor() {
+    this.getScreenWidth();
+  }
   private scrHeight: number;
   private scrWidth: number;
   on = true;
+
+  imgHeight: number;
   @HostListener('window:resize', ['$event'])
-  getScreenWidth(event?) {
+  getScreenWidth(event?): void {
     this.scrHeight = window.innerHeight;
     this.scrWidth = window.innerWidth;
-    if(this.scrWidth <= 1020) this.on = false;
-    if(this.scrWidth >= 1020) this.on = true;
+    if (this.scrWidth <= 1020) { this.on = false; }
+    if (this.scrWidth >= 1020) { this.on = true; }
   }
 
-  @HostListener('window:scroll',['$event'])
+  @HostListener('window:scroll', ['$event'])
 
   onScroll(e: Event): void {
     const header = document.getElementById('header') as HTMLElement;
     const inicio = document.getElementById('inicio') as HTMLElement;
     const strong = document.getElementById('strong') as HTMLElement;
-    const x = Math.max(document.documentElement.offsetHeight|| 0, window.pageYOffset || 0)
+    const x = Math.max(document.documentElement.offsetHeight || 0, window.pageYOffset || 0);
     const y = window.pageYOffset;
 
 
-      this.imgHeight = inicio.clientHeight;
+    this.imgHeight = inicio.clientHeight;
 
-   if(y > this.imgHeight){
-     console.log('hello');
+    if (y > this.imgHeight){
+     // console.log('hello');
      header.style.color = '#9B8068';
      strong.classList.add('brown');
      strong.classList.remove('white');
@@ -47,32 +52,27 @@ export class HeaderComponent implements OnInit {
    }
   }
 
-  mobMenuClose(){
+  mobMenuClose(): void{
     const menu = document.getElementById('mobMenu');
     menu.style.height = '0';
   }
-  mobMenuOpen(){
+  mobMenuOpen(): void{
    const menu = document.getElementById('mobMenu');
    menu.style.height = '100vh';
    document.documentElement.scrollTop = 0;
  }
-  constructor() {
-    this.getScreenWidth();
-  }
 
-  imgHeight:number;
-
-   navView(){
+   navView(): boolean{
      const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
      console.log(vw);
-     if(vw <= 1020) this.on = false;
-     return this.on
+     if (vw <= 1020) { this.on = false; }
+     return this.on;
      }
 
-headerFix():void{
+headerFix(): void{
      const header = document.getElementById('header') as HTMLElement;
-     header.style.position ='initial';
-     header.style.color='rgb(155 128 104)';
+     header.style.position = 'initial';
+     header.style.color = 'rgb(155 128 104)';
      this.mobMenuClose();
 }
 
